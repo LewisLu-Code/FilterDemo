@@ -1,0 +1,37 @@
+﻿@page
+@model FilterDemo.Pages.ProjectItems.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ProjectItem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectItem.ProjectName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectItem.ProjectName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectItem.StartTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectItem.StartTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectItem.EndTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectItem.EndTime)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ProjectItem.ProjectID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
